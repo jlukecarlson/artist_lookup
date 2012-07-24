@@ -14,8 +14,8 @@ $(document).ready(function(){
     
     name_element = result.find('name')[0];
     var name = $(name_element).text();
-    image_element = result.find('image')[4];
-    var mega_image = $(image_element).text();
+    image_element = result.find('image');
+    var mega_image = $(image_element[4]).text();
 
     var summary = $(result.find('bio').find('summary')[0]).text();
     console.log(summary);  
