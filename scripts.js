@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	$("#results").hide();
     var getArtist = function(){
         var artist = $('#term').val();
         $.ajax({
@@ -21,6 +22,7 @@ $(document).ready(function(){
     $("#summary1").html("<p>" + summary + "</p>"); /* replaceWith */
     $("#name").html(name);
     $("#mega_image").attr("src", mega_image)
+    $("results").fadIn();
     /* Appends all results $("#results").append("<h2>" + name + "</h2>" + "<img src=" + mega_image + "> </img> <p>" + summary + "</p>"); */
 	$("#recent_searches").append("<li>" + name + "</li>")
 	}   
