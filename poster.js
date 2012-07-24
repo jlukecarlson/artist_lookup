@@ -1,3 +1,4 @@
+/*
 $(document).ready(function(){
 
    $('#term').focus(function(){
@@ -11,6 +12,7 @@ $(document).ready(function(){
 
         var film = $('#term').val();
         $('#poster').html("<h2 class='loading'>Ha! We haven't forgotten to validate the form! Please enter something.</h2>")
+        var xml = 
    }
 
    $('#search').click(getPoster);
@@ -20,4 +22,4 @@ $(document).ready(function(){
        }
    });
 
-});
+}); */

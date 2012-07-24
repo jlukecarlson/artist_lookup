@@ -9,7 +9,6 @@
      <!--   jQuery, linked from a CDN-->
    <script src="scripts.js"></script>
    <script src="jquery.js"></script>
-   <script type="text/javascript" src="http://use.typekit.com/oya4cmx.js"></script>
    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
    <link rel="stylesheet" href="bootstrap.css" />
 </head>
@@ -19,13 +18,19 @@
       <h1>Artist Finder</h1>
    </header>
    <section id="fetch">
-      <input type="text" placeholder="artist ex. Frank Ocean" id="artist" />
+      <input type="text" placeholder="artist ex. Frank Ocean" id="term" />
       <button id="search">Search</button>
    </section>
    <div id="results">
+      <h2 id ="name"> </name>
+      <h3 id ="summary1"></h3>
+      <img id = "mega_image"> </img>
+      <h3> Recent Searches </h3>
+      <ul id ="recent_searches">
+      </ul>
    </div>
    <footer>
-      <p>Created by <a href="http://twostepmedia.co.uk">Ben Howdle</a></p>
+      <p>Created by <a href="http://github.com/jLukeC">Luke da Pimp</a></p>
    </footer>
 </div>
 </body>
