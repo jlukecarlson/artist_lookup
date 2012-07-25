@@ -53,6 +53,9 @@ $(document).ready(function(){
 	console.log(url)
 	xmlDoc = $.parseXML(url),
     $xml = $(xmlDoc),
-    $artist = $xml.find("artist"); */
+    $artist = $xml.find("artist");
+
+  http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=%20%20&api_key=b25b959554ed76058ac220b7b2e0a026
+     */
 
 
