@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	$("#results").hide();
   var getArtist = function(artist){
-    var artist = artist;
+  var artist = artist;
   if(artist != '') {
         $.ajax({
   type: 'GET',
@@ -28,10 +28,22 @@ $(document).ready(function(){
 	 $("#recent_searches").append("<li> <a href='http://www.last.fm/music/" + name + "'>" + name + "</a> </li>")
 	}   
 	}); /* end of ajax */
-  } /* end of if statement */ else {
+  } else {
     console.log("empty")
   }
   }
+      /*$.ajax({
+  type: 'GET',
+  url: "http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + encodeURIComponent(artist) + "&autocorrect=1&api_key=9b9ad92f8e07b96a969d8e9f944763e1",
+  data: {
+    key: "value"
+  },
+  dataType: "xml",
+  success: function(xml){
+
+  }
+  }); end of ajax */
+
 
    $('#search').click(getArtist(artist = $('#term').val()));
    $('#term').keyup(function(event){
