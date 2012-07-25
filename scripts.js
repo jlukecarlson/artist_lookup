@@ -27,7 +27,20 @@ $(document).ready(function(){
 	 $("#recent_searches").append("<li> <a href='http://www.last.fm/music/" + name + "'>" + name + "</a> </li>")
 	}   
 	}); /* end of ajax */
-   }
+  }
+  var getArtist = function(artist){
+    $.ajax({
+  type: 'GET',
+  url: "http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + encodeURIComponent(artist) + "&autocorrect=1&api_key=9b9ad92f8e07b96a969d8e9f944763e1",
+  data: {
+    key: "value"
+  },
+  dataType: "xml",
+  success: function(xml){
+    
+  }
+  }); /*end of ajax */
+  } /* end of getSongs */
    $('#search').click(getArtist(artist = $('#term').val()));
    $('#term').keyup(function(event){
        if(event.keyCode == 13){
