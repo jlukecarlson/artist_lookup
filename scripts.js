@@ -28,19 +28,20 @@ $(document).ready(function(){
 	}   
 	}); /* end of ajax */
   }
-  var getArtist = function(artist){
+  var getTopTracks = function(){
     $.ajax({
   type: 'GET',
-  url: "http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + encodeURIComponent(artist) + "&autocorrect=1&api_key=9b9ad92f8e07b96a969d8e9f944763e1",
+  url: "http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=Cher&autocorrect=1&api_key=9b9ad92f8e07b96a969d8e9f944763e1",
   data: {
     key: "value"
   },
   dataType: "xml",
   success: function(xml){
-    
+    console.log(xml)
   }
   }); /*end of ajax */
   } /* end of getSongs */
+   $('#toptracks').click(getTopTracks());
    $('#search').click(getArtist(artist = $('#term').val()));
    $('#term').keyup(function(event){
        if(event.keyCode == 13){
@@ -53,9 +54,6 @@ $(document).ready(function(){
 	console.log(url)
 	xmlDoc = $.parseXML(url),
     $xml = $(xmlDoc),
-    $artist = $xml.find("artist");
-
-  http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=%20%20&api_key=b25b959554ed76058ac220b7b2e0a026
-     */
+    $artist = $xml.find("artist");     */
 
 
