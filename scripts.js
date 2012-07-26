@@ -46,7 +46,17 @@ $(document).ready(function(){
   dataType: "xml",
   success: function(xml){
     toptracks = $(xml).find('track');
-    console.log(toptracks);
+    track1 = $(toptracks[0]).find('name')[0];
+    track2 = $(toptracks[1]).find('name')[0];
+    track3 = $(toptracks[2]).find('name')[0];
+    track4 = $(toptracks[3]).find('name')[0];
+    track5 = $(toptracks[4]).find('name')[0];
+    $("#track1").html($(track1).text());
+    $("#track2").html($(track2).text());
+    $("#track3").html($(track3).text());
+    $("#track4").html($(track4).text());
+    $("#track5").html($(track5).text());
+    console.log(track2);
   }
 });
   }
