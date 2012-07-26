@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	$("#results").hide();
+  $("#player").hide();
   var getResults = function() {
       var artist = $('#term').val();
       if(artist != '') {
@@ -68,6 +69,9 @@ $(document).ready(function(){
     dataType: "xml",
     success: function(xml){
       top_result = $(xml).find("track")[0];
+      spotify_url = "https://embed.spotify.com/?uri=" + $(top_result).attr('href')
+      $("#player").attr("src", spotify_url)
+      $("#player").fadeIn();
       console.log($(top_result).attr('href'));
     }
   });
