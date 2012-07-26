@@ -12,26 +12,46 @@
    <link rel="stylesheet" href="bootstrap.css" />
 </head>
 
+
 <body style="background-color: #323131;">
 
 <div class="container">
 <div class="hero-unit">
+   
    <header>
       <center><img src="images/logo.png" alt="Logo" class="well"></center>
    </header>
+   
+   
    <section id="fetch">
       <ul>
-      <li><input type="text" placeholder="artist ex. Frank Ocean" id="term" /></li>
-      <li><button id="search" class="btn btn-large"><img src="images/glyphicons/png/glyphicons_027_search.png"></button></li>
+                           <!-- Search Bar -->
+      <li>
+         <input type="text" placeholder="artist ex. Frank Ocean" id="term" />
+      </li>
+      <li>
+         <button id="search" class="btn btn-large"><img src="images/glyphicons/png/glyphicons_027_search.png"></button>
+      </li>
    </ul>
+
+
+                           <!-- Music Player -->
+
 
    <iframe id="player" src="https://embed.spotify.com/?uri=" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>
 
    </section>
-   <div id="results">
+
+
+                           <!-- Search Results -->
+
+   <div id="results">      
       <h2 id ="name"> </name>
       <h3 id ="summary1"></h3>
    <div id="mid-content">
+
+                          <!-- Top Tracks Table -->
+
       <div id = "top_tracks"> 
             <h1> Top Tracks </h1>
                <table class="table table-striped">
@@ -61,6 +81,9 @@
                   </tr>
                </table>
          </div>
+
+                       <!-- Artist Image -->
+
       <img id = "mega_image"> </img>
          
       </div>
