@@ -8,6 +8,13 @@
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
 
+#player {
+  margin-top: -80px;
+  margin-left: 390px;
+  position: absolute;
+
+}
+
 #fetch {
 padding: 0 30px 30px 5px;
 margin-left: 47px;
