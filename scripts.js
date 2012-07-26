@@ -57,8 +57,19 @@ $(document).ready(function(){
     $("#track4").html("<a href='" + $($(toptracks[3]).find('url')[0]).text() + "'>" + $(track4).text() + "</a>");
     $("#track5").html("<a href='" + $($(toptracks[4]).find('url')[0]).text() + "'>" + $(track5).text() + "</a>");
     console.log($($(toptracks[1]).find('url')[0]).text());
+    spotifySong($(track1).text());
   }
 });
+  }
+  var spotifySong = function(song){
+    $.ajax({
+  type: 'GET',
+  url: "http://ws.spotify.com/search/1/track?q=" + encodeURIComponent(song),
+    dataType: "xml",
+    success: function(xml){
+      console.log(xml);
+    }
+  });
   }
    $('#search').click(getResults());
    $('#term').keyup(function(event){
