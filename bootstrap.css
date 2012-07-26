@@ -9,7 +9,11 @@
  */
 
 #fetch {
-padding: 30px 30px 30px 5px;
+padding: 0 30px 30px 5px;
+margin-left: 47px;
+}
+#fetch li {
+  display: inline-block;
 }
 
 #mega_image {
@@ -25,6 +29,15 @@ padding-bottom: 15px;
 display: block;
 margin-left: auto;
 margin-right: auto;
+}
+
+#term {
+  margin-top: 8px;
+  margin-right: -3px;
+  width: 225px;
+  height: 35px;
+  font-size: 17px;
+  padding-left: 10px;
 }
 
 
