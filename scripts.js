@@ -12,14 +12,14 @@ $(document).ready(function(){
   dataType: "xml",
   success: function(xml){
     var result = $(xml).find('artist')
-    
+    var toptracks= getTopTracks(); /*
+    console.log(toptracks.find('track')); */
     name_element = result.find('name')[0];
     var name = $(name_element).text();
     image_element = result.find('image');
     var mega_image = $(image_element[4]).text();
 
-    var summary = $(result.find('bio').find('summary')[0]).text();
-    console.log(summary);  
+    var summary = $(result.find('bio').find('summary')[0]).text();  
     $("#summary1").html("<p>" + summary + "</p>"); /* replaceWith */
     $("#name").html(name);
     $("#mega_image").attr("src", mega_image)
@@ -43,8 +43,12 @@ $(document).ready(function(){
 
   }
   }); end of ajax */
-
-
+  var getTopTracks = function(){
+    var url='http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=Frank%20Ocean&api_key=9b9ad92f8e07b96a969d8e9f944763e1';
+    $.get(url, 'xml', function(xml){
+      console.log(xml);
+    });
+  }
    $('#search').click(getArtist(artist = $('#term').val()));
    $('#term').keyup(function(event){
        if(event.keyCode == 13){
