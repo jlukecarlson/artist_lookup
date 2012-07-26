@@ -67,7 +67,8 @@ $(document).ready(function(){
   url: "http://ws.spotify.com/search/1/track?q=" + encodeURIComponent(song),
     dataType: "xml",
     success: function(xml){
-      console.log(xml);
+      top_result = $(xml).find("track")[0];
+      console.log($(top_result).attr('href'));
     }
   });
   }
