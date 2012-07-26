@@ -22,6 +22,8 @@ $(document).ready(function(){
     var result = $(xml).find('artist')
     name_element = result.find('name')[0];
     var name = $(name_element).text();
+    $("#listen_lastfm").attr("href","http://www.last.fm/listen/artist/" + name + "/similarartists"); /* put here for it to load faster than other stuff */
+
     image_element = result.find('image');
     var mega_image = $(image_element[4]).text();
 
@@ -72,7 +74,8 @@ $(document).ready(function(){
       spotify_url = "https://embed.spotify.com/?uri=" + $(top_result).attr('href')
       $("#player").attr("src", spotify_url)
       $("#player").fadeIn();
-      console.log($(top_result).attr('href'));
+      $("#listen_spotify").attr("href", "http://open.spotify.com/artist/" + $($(top_result).find('artist')).attr('href'));
+      console.log($(top_result));
     }
   });
   }
