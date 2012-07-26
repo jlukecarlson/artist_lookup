@@ -51,12 +51,12 @@ $(document).ready(function(){
     track3 = $(toptracks[2]).find('name')[0];
     track4 = $(toptracks[3]).find('name')[0];
     track5 = $(toptracks[4]).find('name')[0];
-    $("#track1").html($(track1).text());
-    $("#track2").html($(track2).text());
-    $("#track3").html($(track3).text());
-    $("#track4").html($(track4).text());
-    $("#track5").html($(track5).text());
-    console.log(track2);
+    $("#track1").html("<a href='" + $($(toptracks[0]).find('url')[0]).text() + "'>" + $(track1).text() + "</a>");
+    $("#track2").html("<a href='" + $($(toptracks[1]).find('url')[0]).text() + "'>" + $(track2).text() + "</a>");
+    $("#track3").html("<a href='" + $($(toptracks[2]).find('url')[0]).text() + "'>" + $(track3).text() + "</a>");
+    $("#track4").html("<a href='" + $($(toptracks[3]).find('url')[0]).text() + "'>" + $(track4).text() + "</a>");
+    $("#track5").html("<a href='" + $($(toptracks[4]).find('url')[0]).text() + "'>" + $(track5).text() + "</a>");
+    console.log($($(toptracks[1]).find('url')[0]).text());
   }
 });
   }
