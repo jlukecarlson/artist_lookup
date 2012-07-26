@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	$("#results").hide();
   var getArtist = function(artist){
-  var artist = artist;
+  var artist = $('#term').val();
   if(artist != '') {
         $.ajax({
   type: 'GET',
@@ -49,10 +49,10 @@ $(document).ready(function(){
       console.log(xml);
     });
   }
-   $('#search').click(getArtist(artist = $('#term').val()));
+   $('#search').click(getArtist());
    $('#term').keyup(function(event){
        if(event.keyCode == 13){
-           getArtist(artist = $('#term').val());
+           getArtist();
        }
    });
 });
