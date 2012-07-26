@@ -45,9 +45,25 @@ $(document).ready(function(){
   }); end of ajax */
   var getTopTracks = function(){
     var url='http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=Frank%20Ocean&api_key=9b9ad92f8e07b96a969d8e9f944763e1';
-    $.get(url, 'xml', function(xml){
-      console.log(xml);
-    });
+            $.ajax({
+  type: 'GET',
+  url: url,
+  data: {
+    key: "value"
+  },
+  dataType: "xml",
+  success: function(xml){
+    toptracks = $(xml).find('track');
+    console.log(toptracks);
+  }
+});
+    /*xml = $.get(url);
+    var track_results = $.parseXML(xml);
+    console.log(track_results); 
+    $.get(url, dataType: 'xml', function(xml){
+       var track_results= $.parseXML(xml);
+       console.log(track_results);
+    }); */
   }
    $('#search').click(getArtist());
    $('#term').keyup(function(event){
