@@ -1,4 +1,8 @@
 $(document).ready(function(){
+  if(window.location.hash){
+    var hash = window.location.hash.substring(1);
+    alert (hash);
+  }
 	$("#results").hide();
   $("#listen_section").hide();
   var getResults = function() {
