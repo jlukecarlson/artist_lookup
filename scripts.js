@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	$("#results").hide();
-  $("#player").hide();
+  $("#listen_section").hide();
   var getResults = function() {
       var artist = $('#term').val();
       if(artist != '') {
@@ -71,10 +71,13 @@ $(document).ready(function(){
     dataType: "xml",
     success: function(xml){
       top_result = $(xml).find("track")[0];
-      spotify_url = "https://embed.spotify.com/?uri=" + $(top_result).attr('href')
-      $("#player").attr("src", spotify_url)
-      $("#player").fadeIn();
-      $("#listen_spotify").attr("href", "http://open.spotify.com/artist/" + $($(top_result).find('artist')).attr('href'));
+      spotify_embed_url = "https://embed.spotify.com/?uri=" + $(top_result).attr('href')
+      $("#player").attr("src", spotify_embed_url)
+      $("#listen_section").fadeIn();
+      artist_href = $($(top_result).find('artist')).attr('href');
+      artist_code = artist_href.split('artist:');
+      console.log(artist_code);
+      $("#listen_spotify").attr("href", "http://open.spotify.com/artist/" + artist_code[1]);
       console.log($(top_result));
     }
   });
