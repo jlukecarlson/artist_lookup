@@ -4,6 +4,7 @@ $(document).ready(function(){
   var getResults = function(input) {
       var artist = input;
       if(artist != '') {
+        $("#results").hide();
         getArtist(artist);
         getTopTracks(artist);
       } else {
@@ -34,7 +35,7 @@ $(document).ready(function(){
     $("#mega_image").attr("src", mega_image)
     $("#results").fadeIn();
     /* Appends all results $("#results").append("<h2>" + name + "</h2>" + "<img src=" + mega_image + "> </img> <p>" + summary + "</p>"); */
-	 $("#recent_searches").append("<li> <a href='#" + encodeURIComponent(name) + "'>" + name + "</a> </li>")
+	 $("#recent_searches").append("<li> <a class='results_terms' href='#artist_lookup.html#" + encodeURIComponent(name) + "'>" + name + "</a> </li>")
 	}   
 	}); /* end of ajax */
 
