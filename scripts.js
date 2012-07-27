@@ -5,8 +5,8 @@ $(document).ready(function(){
   }
 	$("#results").hide();
   $("#listen_section").hide();
-  var getResults = function() {
-      var artist = $('#term').val();
+  var getResults = function(input) {
+      var artist = input;
       if(artist != '') {
         getArtist(artist);
         getTopTracks(artist);
@@ -86,10 +86,10 @@ $(document).ready(function(){
     }
   });
   }
-   $('#search').click(getResults());
+   $('#search').click(getResults($('#term').val()));
    $('#term').keyup(function(event){
        if(event.keyCode == 13){
-           getResults();
+           getResults($('#term').val());
        }
    });
 });
