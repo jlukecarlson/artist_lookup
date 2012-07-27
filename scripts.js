@@ -1,8 +1,4 @@
 $(document).ready(function(){
-  if(window.location.hash){
-    var hash = window.location.hash.substring(1);
-    alert (hash);
-  }
 	$("#results").hide();
   $("#listen_section").hide();
   var getResults = function(input) {
@@ -26,6 +22,7 @@ $(document).ready(function(){
     var result = $(xml).find('artist')
     name_element = result.find('name')[0];
     var name = $(name_element).text();
+    window.location.hash = encodeURIComponent(name);
     $("#listen_lastfm").attr("href","http://www.last.fm/listen/artist/" + name + "/similarartists"); /* put here for it to load faster than other stuff */
 
     image_element = result.find('image');
@@ -85,6 +82,10 @@ $(document).ready(function(){
       console.log($(top_result));
     }
   });
+  }
+  if(window.location.hash){ /* checks for #artist in the url and puts it through getResults to find the info*/
+    var hash = window.location.hash.substring(1);
+    getResults(hash);
   }
    $('#search').click(getResults($('#term').val()));
    $('#term').keyup(function(event){
