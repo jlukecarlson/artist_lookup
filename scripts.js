@@ -21,7 +21,7 @@ $(document).ready(function(){
   success: function(xml){
     var result = $(xml).find('artist')
     name_element = result.find('name')[0];
-    var name = $(name_element).text();
+    name = $(name_element).text();
     window.location.hash = encodeURIComponent(name);
     $("#listen_lastfm").attr("href","http://www.last.fm/listen/artist/" + name + "/similarartists"); /* put here for it to load faster than other stuff */
 
@@ -34,7 +34,7 @@ $(document).ready(function(){
     $("#mega_image").attr("src", mega_image)
     $("#results").fadeIn();
     /* Appends all results $("#results").append("<h2>" + name + "</h2>" + "<img src=" + mega_image + "> </img> <p>" + summary + "</p>"); */
-	 $("#recent_searches").append("<li> <a href='http://www.last.fm/music/" + name + "'>" + name + "</a> </li>")
+	 $("#recent_searches").append("<li> <a href='#" + encodeURIComponent(name) + "'>" + name + "</a> </li>")
 	}   
 	}); /* end of ajax */
 
