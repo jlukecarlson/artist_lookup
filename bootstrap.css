@@ -9,9 +9,14 @@
  */
 
 #player {
-  margin-top: -80px;
-  margin-left: 390px;
+  margin-top: -60px;
+  margin-left: 370px;
   position: absolute;
+  margin-bottom: 30px;
+  overflow: hidden;
+  background-color: #F4F4F4;
+  border: 1px solid #DDD;
+  padding: 10px;
 
 }
 
