@@ -15,6 +15,14 @@
 
 }
 
+#listen_link {
+  margin-left: 25px;
+}
+
+#listen_spotify {
+  margin-left: 5px;
+}
+
 #fetch {
 padding: 0 30px 30px 5px;
 margin-left: 47px;
