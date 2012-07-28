@@ -1,5 +1,6 @@
 $(document).ready(function(){
-	$("#results").hide();
+	//$('#myModal').modal('show');
+  $("#results").hide();
   $("#listen_section").hide();
   var getResults = function(input) {
       var artist = input;
