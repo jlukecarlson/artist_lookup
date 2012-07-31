@@ -1,11 +1,9 @@
 TODO:
 	add an about modal (http://twitter.github.com/bootstrap/javascript.html#modals)
 	Add spotify buttons to the top tracks
-<<<<<<< HEAD
 	Add related artists below the picture
-=======
 	Make the bookmark icon work
 	convert the logo into a link back to the homepage
 	Find a New Name
-	
->>>>>>> added to the todo
+	Make the spotify player more precise so it doesn't get the wrong tracks
+	find a way to handle 404s
