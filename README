@@ -7,3 +7,10 @@ TODO:
 	Find a New Name
 	Make the spotify player more precise so it doesn't get the wrong tracks
 	find a way to handle 404s
+
+	Consider adding KnockoutJS capabilities to make the site more dynamic and effective
+	Change the way URLS are handled:
+	       Both help handing URL state changes which is highly important at the moment. Chose either:
+	       	     Sammy.js - http://sammyjs.org/
+		     History.js - https://github.com/balupton/History.js/
+		 
