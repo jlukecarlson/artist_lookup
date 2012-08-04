@@ -1,8 +1,6 @@
 $(document).ready(function(){
     //$('#myModal').modal('show');
-    $('#donebut').click(function () {
-      $('.bar').css("width: 100%");
-    });
+    $("#loadingbar").hide();
     $("#results").hide();
     $("#listen_section").hide();
     $("#error").hide();
@@ -17,6 +15,7 @@ $(document).ready(function(){
 	}
     }
     var getArtist = function(artist){
+	$("#loadingbar").show();
 	window.location.hash = artist;
 	$.ajax({
 	    type: 'GET',
@@ -26,10 +25,12 @@ $(document).ready(function(){
 	    },
 	    dataType: "xml",
 	    error: function () {
+		$("#loadingbar").hide();
 	    	$('#error').fadeIn();
 		$('#error').html("<strong> Aw Sorry There Was An Error. The artist might not exist :O </strong>");
 	    },
 	    success: function(xml){
+		$("#loadingbar").hide();
 		var status = $(xml).find('lfm');
 		console.log($(status).attr('status'));
 		if (status != 'failed'){
@@ -113,12 +114,11 @@ $(document).ready(function(){
 	    }
 	});
     }
-    /* if(window.location.hash){  checks for #artist in the url and puts it through getResults to find the info 
-       
-       var hash = window.location.hash.substring(1);
-       console.log('the hash is' + hash);
-       getResults(hash);
-       } */
+    if(window.location.hash){ /* checks for #artist in the url and puts it through getResults to find the info  */
+	var hash = window.location.hash.substring(1);
+	console.log('the hash is' + hash);
+	getResults(hash);
+    }
     $('#search').click(function () {
 	getResults($('#term').val())
     });
@@ -138,6 +138,8 @@ $(document).ready(function(){
     $('#term').keyup(function(event){
 	if(event.keyCode == 13){
 	    getResults($('#term').val());
+	} else {
+	    $("loadingbar").show();   
 	}
     });
 });
