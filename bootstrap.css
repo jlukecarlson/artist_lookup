@@ -47,6 +47,10 @@ padding-bottom: 15px;
 
 }
 
+#related_artists {
+  font-size: 18px;
+}
+
 #term {
   margin-top: 8px;
   margin-right: -3px;
