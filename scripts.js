@@ -102,7 +102,7 @@ $(document).ready(function(){
 	    dataType: "xml",
 	    error: function () {
 	    	$('#error').fadeIn();
-		$('#error').html("<h3> Aw Sorry There Was An Error. The artist might not exist :O </h3>");
+		$('#error').html("<h3> Aw Sorry There Was An Error. Spotify Player could not find the top son </h3>");
 	    },
 	    success: function(xml){
 		top_result = $(xml).find("track")[0];
