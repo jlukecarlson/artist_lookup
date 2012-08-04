@@ -1,108 +1,110 @@
 <!DOCTYPE html>
 <html>
-<head>
-   <meta name="author" content="Luke and Richard">
-   <meta name="description" content="Provides infomration on musicians">
-   <title>Artist Lookup</title>
-   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
-   <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.2.min.js"></script>
-     <!--   jQuery, linked from a CDN-->
-     <script src="scripts.js"></script>
-     <script src="jquery.history.js"></script>
-   <link rel="stylesheet" href="bootstrap.css" />
-   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-</head>
+  <head>
+    <meta name="author" content="Luke and Richard">
+    <meta name="description" content="Provides infomration on musicians">
+    <title>Artist Lookup</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.2.min.js"></script>
+    <!--   jQuery, linked from a CDN-->
+    <script src="scripts.js"></script>
+    <script src="jquery.history.js"></script>
+    <link rel="stylesheet" href="bootstrap.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  </head>
 
 
-<body style="background-color: #323131;">
+  <body style="background-color: #323131;">
 
-<div class="container">
-<div class="hero-unit">
-   
-   <header>
-      <center><a href="artist_lookup.html"><img src="images/logo.png" alt="Logo" class="well"></a></center>
-   </header>
-   
-   
-   <section id="fetch">
-      <ul>
-                           <!-- Search Bar -->
-      <li>
-         <input type="text" placeholder="artist ex. Frank Ocean" id="term" />
-      </li>
-      <li>
-         <button id="search" class="btn btn-large"><img src="images/glyphicons/png/glyphicons_027_search.png"></button>
-      </li>
-   </ul>
-
-
-                           <!-- Music Player -->
-
-   <section id="listen_section">                        
-   <div id ="player_container"></div>
-   
-   <div id="listen_link">
-   <a id="listen_lastfm" href = '#'> <button class="btn btn-danger btn-large"> Listen on Last.fm</button> </a>
-   <a id="listen_spotify" href = '#'> <button class='btn btn-success btn-large'> Listen on Spotify</button> </a>
-   </div>
-   </section>
-   </section>
+    <div class="container">
+      <div class="hero-unit">
+	
+	<header>
+	  <center><a href="artist_lookup.html"><img src="images/logo.png" alt="Logo" class="well"></a></center>
+	</header>
+	
+	
+	<section id="fetch">
+	  <ul>
+            <!-- Search Bar -->
+	    <li>
+              <input type="text" placeholder="artist ex. Frank Ocean" id="term" />
+	    </li>
+	    <li>
+              <button id="search" class="btn btn-large"><img src="images/glyphicons/png/glyphicons_027_search.png"></button>
+	    </li>
+	  </ul>
 
 
-                           <!-- Search Results -->
-   <div id="results">      
-      <h2 id ="name"> </name>
-      <h3 id ="summary1"></h3>
-   <div id="mid-content">
+          <!-- Music Player -->
 
-                          <!-- Top Tracks Table -->
+	  <section id="listen_section">                        
+	    <div id ="player_container"></div>
+	    
+	    <div id="listen_link">
+	      <a id="listen_lastfm" href = '#'> <button class="btn btn-danger btn-large"> Listen on Last.fm</button> </a>
+	      <a id="listen_spotify" href = '#'> <button class='btn btn-success btn-large'> Listen on Spotify</button> </a>
+	    </div>
+	  </section>
+	</section>
+        <!-- Error and Warnings Section -->
+	<div id="error">
+	</div>
 
-      <div id = "top_tracks"> 
-            <h1> Top Tracks </h1>
-               <table class="table table-striped">
-                  <tr>
-                     <th>#</th>
-                     <th>Name</th>
-                  </tr>
-                  <tr>
-                     <td>1.</td>
-                     <td id ="track1"></td>
-                  </tr>
-                  <tr>
-                     <td>2.</td>
-                     <td id ="track2"></td>
-                  </tr>
-                  <tr>
-                     <td>3.</td>
-                     <td id ="track3"></td>
-                  </tr>
-                  <tr>
-                     <td>4.</td>
-                     <td id ="track4"></td>
-                  </tr>
-                  <tr>
-                     <td>5.</td>
-                     <td id ="track5"></td>
-                  </tr>
-               </table>
-         </div>
+        <!-- Search Results -->
+	<div id="results">      
+	  <h2 id ="name"> </name>
+<h3 id ="summary1"></h3>
+<div id="mid-content">
 
-                       <!-- Artist Image -->
+  <!-- Top Tracks Table -->
 
-      <img id = "mega_image"> </img>
-      </div>
+  <div id = "top_tracks"> 
+    <h1> Top Tracks </h1>
+    <table class="table table-striped">
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+      </tr>
+      <tr>
+        <td>1.</td>
+        <td id ="track1"></td>
+      </tr>
+      <tr>
+        <td>2.</td>
+        <td id ="track2"></td>
+      </tr>
+      <tr>
+        <td>3.</td>
+        <td id ="track3"></td>
+      </tr>
+      <tr>
+        <td>4.</td>
+        <td id ="track4"></td>
+      </tr>
+      <tr>
+        <td>5.</td>
+        <td id ="track5"></td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Artist Image -->
+
+  <img id = "mega_image"> </img>
+</div>
    </br>
    </br>
-      <div class="recent_search">
-      <h3> Recent Searches </h3>
-      <ul id ="recent_searches">
-      </ul>
-      </div>
+   <div class="recent_search">
+     <h3> Recent Searches </h3>
+     <ul id ="recent_searches">
+     </ul>
    </div>
-   
-   <a class="btn" data-toggle="modal" href="#myModal" >Launch Modal</a>
+</div>
 
-   <div class="modal hide" id="myModal">
+<a class="btn" data-toggle="modal" href="#myModal" >Launch Modal</a>
+
+<div class="modal hide" id="myModal">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal">×</button>
     <h3>Modal header</h3>
@@ -117,14 +119,12 @@
 </div>
 
 
-   <footer>
-      <p>Created by <a href="http://github.com/jLukeC">Luke Carlson</a></p>
-      <p>Designed by <a href="http://RyanStecher.net">Ryan Stecher</a></p>
-   </footer>
+<footer>
+  <p>Created by <a href="http://github.com/jLukeC">Luke Carlson</a></p>
+  <p>Designed by <a href="http://RyanStecher.net">Ryan Stecher</a></p>
+</footer>
 </div>
 </div>
 </div>
-   <!-- Non necessary scripts -->
-      <script src="bootstraps-modal.js"></script>
 </body>
 </html>
