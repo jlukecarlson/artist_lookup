@@ -1,5 +1,8 @@
 $(document).ready(function(){
     //$('#myModal').modal('show');
+    $('#donebut').click(function () {
+      $('.bar').css("width: 100%");
+    });
     $("#results").hide();
     $("#listen_section").hide();
     var getResults = function(input) {
