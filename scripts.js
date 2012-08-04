@@ -49,7 +49,10 @@ $(document).ready(function(){
 		    $("#mega_image").attr("src", mega_image)
 		    $("#results").fadeIn();
 		    /* Appends all results $("#results").append("<h2>" + name + "</h2>" + "<img src=" + mega_image + "> </img> <p>" + summary + "</p>"); */
-    		    $("#recent_searches").append("<li id='recent_term'> <a href='#" + name + "' /a>" + name + "</li>")
+    		    $("#recent_terms").prepend("<li id='recent_term'> <a href='#" + name + "' /a>" + name + "</li>")
+		    similar_xml= $(xml).find("similar"); /*Similar artists section*/
+		    similar_names = $($(similar_xml).find("artist")).find('name');
+		    $("#related_artists").html("<a href='#" + $(similar_names[0]).text() + "'>" + $(similar_names[0]).text() + "</a>, <a href='#" + $(similar_names[1]).text() + "'>" + $(similar_names[1]).text() + "</a>, <a href='#" + $(similar_names[2]).text() + "'>" + $(similar_names[2]).text() + "</a>");
 		}  
 	    }
 	});
@@ -122,7 +125,7 @@ $(document).ready(function(){
     $('#search').click(function () {
 	getResults($('#term').val())
     });
-    $('#recent_searches').click(function () {
+    $('#recent_terms').click(function () {
 	setTimeout(function(){
 	    var hash = window.location.hash.substring(1);
 	    console.log(hash);
@@ -134,6 +137,13 @@ $(document).ready(function(){
 	  musician = $(this).text();
 	  console.log(musician);
 	  getResults(musician);  */
+    });
+    $('#related_artists').click(function () {
+	setTimeout(function(){
+	    hash = window.location.hash.substring(1);
+	    console.log(hash);
+	    getResults(hash);
+	}, 500);
     });
     $('#term').keyup(function(event){
 	if(event.keyCode == 13){
