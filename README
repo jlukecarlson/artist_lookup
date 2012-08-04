@@ -3,12 +3,17 @@ TODO:
 	Add spotify buttons to the top tracks
 	Add related artists below the picture
 	Make the bookmark icon work
-	convert the logo into a link back to the homepage
 	Find a New Name
 	Make the spotify player more precise so it doesn't get the wrong tracks
 	find a way to handle 404s
-
+	hding unnecessary shit and making the top tracks dynamic
 	Consider adding KnockoutJS capabilities to make the site more dynamic and effective
+
+
+
+
+DONE SECTION
+	convert the logo into a link back to the homepage
 	Change the way URLS are handled:
 	       Both help handing URL state changes which is highly important at the moment. Chose either:
 	       	     Sammy.js - http://sammyjs.org/

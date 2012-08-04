@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-   <meta name="author" content="Jamal and Richard">
+   <meta name="author" content="Luke and Richard">
    <meta name="description" content="Provides infomration on musicians">
    <title>Artist Lookup</title>
    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.2.min.js"></script>
      <!--   jQuery, linked from a CDN-->
      <script src="scripts.js"></script>
+     <script src="jquery.history.js"></script>
    <link rel="stylesheet" href="bootstrap.css" />
    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 </head>
@@ -39,7 +39,7 @@
                            <!-- Music Player -->
 
    <section id="listen_section">                        
-   <iframe id="player" src="" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>
+   <div id ="player_container"></div>
    
    <div id="listen_link">
    <a id="listen_lastfm" href = '#'> <button class="btn btn-danger btn-large"> Listen on Last.fm</button> </a>
