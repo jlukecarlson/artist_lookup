@@ -5,6 +5,7 @@ $(document).ready(function(){
     });
     $("#results").hide();
     $("#listen_section").hide();
+    $("#error").hide();
     var getResults = function(input) {
 	console.log("going to get results for " + input)
 	var artist = input;
@@ -26,7 +27,7 @@ $(document).ready(function(){
 	    dataType: "xml",
 	    error: function () {
 	    	$('#error').fadeIn();
-		$('#error').html("<h3> Aw Sorry There Was An Error. The artist might not exist :O </h3>");
+		$('#error').html("<strong> Aw Sorry There Was An Error. The artist might not exist :O </strong>");
 	    },
 	    success: function(xml){
 		var status = $(xml).find('lfm');
