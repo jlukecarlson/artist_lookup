@@ -8,6 +8,11 @@
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
 
+#beta {
+  position: absolute;
+  margin: -100px;
+}
+
 #player {
   margin-top: -60px;
   margin-left: 370px;
@@ -28,12 +33,17 @@
   margin-left: 5px;
 }
 
-#fetch {
-padding: 0 30px 30px 5px;
-margin-left: 47px;
-}
 #fetch li {
   display: inline-block;
+}
+
+#fetch {
+  /*padding: 0 30px 30px 5px;*/
+  margin-left: 110px;
+}
+
+#name {
+  padding-top: 20px;
 }
 
 #mega_image {
@@ -44,11 +54,13 @@ border: 1px solid #DDD;
 padding: 20px;
 padding-bottom: 15px;
 /*display: block;*/
+float: left;
 
 }
 
 #related_artists {
   font-size: 18px;
+  padding: 25px 0 15px 0;
 }
 
 #term {
@@ -62,17 +74,18 @@ padding-bottom: 15px;
 
 #mid-content {
   margin-top: 20px;
+  padding: 10px;
 } 
 
-#top_tracks {
-  width: 200px;
-  position: absolute;
-  margin-left: 570px;
- 
+#right_content {
+  position: relative;
+  float: right;
+  width: 225px;
+  margin-right: 55px;
+  margin-top: -50px;
 }
 
 .recent_search_holder {
-  float: bottom;
   position: relative;
   height: 85px;
   width: 250px;
@@ -80,6 +93,10 @@ padding-bottom: 15px;
   overflow: hidden;
 }
 
+#footer {
+  width: 250px;
+
+ }
 
 
 article,
@@ -4035,6 +4052,10 @@ a.thumbnail:hover {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
+  width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+
 }
 .hero-unit h1 {
   margin-bottom: 0;
