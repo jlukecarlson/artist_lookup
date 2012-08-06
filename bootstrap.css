@@ -93,6 +93,10 @@ float: left;
   overflow: hidden;
 }
 
+#about {
+  padding: 10px;
+}
+
 #footer {
   width: 250px;
 
