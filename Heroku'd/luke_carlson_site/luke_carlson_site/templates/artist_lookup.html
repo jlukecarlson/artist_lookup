@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="author" content="Luke and Richard">
+    <meta name="description" content="Provides infomration on musicians">
+    <title>Artist Lookup</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.2.min.js"></script>
+    <!--   jQuery, linked from a CDN-->
+    <script src="scripts.js"></script>
+    <script src="jquery.history.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <link rel="stylesheet" href="bootstrap.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+  
+
+<body style="background-color: #323131;">
+
+
+<div class="hero-unit">
+  <img src="http://www.auplod.com/u/oudpal14b2a.png" id="beta"></img>
+<div class="container">
+
+	<header>
+    <center><a href="artist_lookup.html"><img src="images/logo.png" alt="Logo" class="well"></a></center>
+  </header>
+
+  
+  
+  <section id="fetch">
+    <ul>
+            <!-- Search Bar -->
+      <li>
+              <input type="text" placeholder="artist ex. Frank Ocean" id="term" />
+      </li>
+      <li>
+              <button id="search" class="btn btn-large"><img src="images/glyphicons/png/glyphicons_027_search.png"></button>
+      </li>
+    </ul>
+
+
+          <!-- Music Player -->
+
+    <section id="listen_section">                        
+      <div id ="player_container"></div>
+      
+      <div id="listen_link">
+        <a id="listen_lastfm" href = '#'> <button class="btn btn-danger btn-large"> Listen on Last.fm</button> </a>
+        <a id="listen_spotify" href = '#'> <button class='btn btn-success btn-large'> Listen on Spotify</button> </a>
+      </div>
+    </section>
+  </section>
+
+        <!-- Error and Warnings Section -->
+      <div id="error">
+        <p>Sorry, that search was invalid.</p>
+      </div>
+
+      <div id ="loadingbar"  style="width: 300px; margin: auto; padding: 30px 0 5px 0;"> <div class="progress progress-striped active">
+          <div class="bar"
+         style="width: 100%;"></div>
+        </div>
+      </div>
+        
+        <!-- Search Results -->
+
+    <div id="results">      
+      <h2 id ="name"> </name></h2>
+      <h3 id ="summary1"></h3>
+
+            <!-- Related Artists -->
+
+      <h2>Related Artists:</h2>
+      <span id="related_artists"></span>
+      
+
+      <div id="mid-content">
+
+       <!-- Artist Image -->
+
+        <img id ="mega_image"></img>
+
+        <!-- Top Tracks Table -->
+
+            <div id = "right_content"> 
+              <div id="top_tracks">
+                <h1> Top Tracks </h1>
+                <table class="table table-striped">
+                  <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                  </tr>
+                  <tr>
+                    <td>1.</td>
+                    <td id ="track1"></td>
+                  </tr>
+                  <tr>
+                    <td>2.</td>
+                    <td id ="track2"></td>
+                  </tr>
+                  <tr>
+                    <td>3.</td>
+                    <td id ="track3"></td>
+                  </tr>
+                  <tr>
+                    <td>4.</td>
+                    <td id ="track4"></td>
+                  </tr>
+                  <tr>
+                    <td>5.</td>
+                    <td id ="track5"></td>
+                  </tr>
+                </table>
+              </div>
+
+
+                <div class="recent_search_holder">
+                 <h3> Recent Searches </h3>
+                 <ul id ="recent_terms">
+                 </ul>
+               </div>
+
+    <!-- ABOUT US MODAL
+        Hey dude, I found a JSFiddle of a working modal, made some changes to contain some relavant text and what not, check it out here:
+        
+        http://jsfiddle.net/2KWJL/2/
+-->
+
+<a data-toggle="modal" href="#myModal" class="btn btn-large" id="about">About Us</a>
+
+<div id="myModal" class="modal hide fade" style="display: none; ">
+            <div class="modal-header">
+              <button class="close" data-dismiss="modal">×</button>
+              <h3>About</h3>
+            </div>
+            <div class="modal-body">
+              <h4>Heads Up!</h4>
+              <p>We strongly recommend that you have Spotify installed. Also, we recommend that you have Spotify running while browsing for new artists to save loading time!</p>
+
+              <h4>About Us</h4>
+              <p>We're two doods who know a thing or two about programming.</p>
+            </div>
+            <div class="modal-footer">
+              <a href="#" class="btn" data-dismiss="modal">Close</a>
+            </div>
+          </div>​
+
+
+
+              </div>
+           </div>
+          </div>
+   
+   </br>
+               <footer id="footer">
+    <p>Created by <a href="http://github.com/jLukeC">Luke Carlson</a></p>
+    <p>Designed by <a href="http://RyanStecher.net">Ryan Stecher</a></p>
+              </footer>
+ 
+
+</div>
+</div>
+
+
+
+</body>
+</html>
