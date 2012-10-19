@@ -1,0 +1,7 @@
+venv
+*.pyc
+*#
+*~
+*.save
+.DS_Store
+celerybeat-schedule
